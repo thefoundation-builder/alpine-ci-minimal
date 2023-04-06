@@ -1,5 +1,4 @@
 name: Docker Image CI
-name: Delete old workflow runs
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
