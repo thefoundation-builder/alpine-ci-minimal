@@ -21,7 +21,11 @@ jobs:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
           retain_days: 0
-          keep_minimum_runs: 1
+          keep_minimum_runs: 4
+
+  del_containers:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/delete-package-versions@v4
         name: delete untagged containers
         with: 
